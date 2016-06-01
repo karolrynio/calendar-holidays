@@ -20,3 +20,4 @@ trait HolidayEngine {
     */
   def countHolidaysLeftInYear(year: Option[Int] = None): Future[Int]
 }
+
