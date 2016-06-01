@@ -1,6 +1,7 @@
 package pl.warsawscala.calendar
 
 import java.time.LocalDate
+import scala.concurrent.Future
 
 import scala.concurrent.Future
 

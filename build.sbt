@@ -13,3 +13,5 @@ lazy val restapi = Project("restapi", file("restapi"))
     `com.typesafe.scala-logging_scala-logging`
   )
 )
+
+libraryDependencies ++= Seq("org.specs2" %% "specs2-mock" % "3.8" % "test")
