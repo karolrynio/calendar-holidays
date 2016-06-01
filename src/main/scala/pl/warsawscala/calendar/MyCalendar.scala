@@ -3,7 +3,7 @@ package pl.warsawscala.calendar
 import java.time.LocalDate
 
 trait MyCalendar {
-  def getDaysFor(from: LocalDate, to: LocalDate): Seq[PlannedDay] // ???
+  def getEventsFor(from: LocalDate, to: LocalDate): Future[Seq[PlannedEvent]] // ???
 }
 
-case class PlannedDay(localDate: LocalDate, tags: Seq[String]) // ???
+case class PlannedEvent(startDate: LocalDate, endDateExclusive: LocalDate, tags: Seq[String]) // ???
