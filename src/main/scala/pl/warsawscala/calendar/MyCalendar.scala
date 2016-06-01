@@ -1,4 +1,4 @@
-package pl.warsawscala
+package pl.warsawscala.calendar
 
 import java.time.LocalDate
 

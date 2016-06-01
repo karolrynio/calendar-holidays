@@ -1,0 +1,2 @@
+GET   /     pl.warsawscala.rest.controller.GoogleCalendarController.holidays(startTime:org.joda.time.DateTime = org.joda.time.DateTime.now,endTime:org.joda.time.DateTime = org.joda.time.DateTime.now)
+
