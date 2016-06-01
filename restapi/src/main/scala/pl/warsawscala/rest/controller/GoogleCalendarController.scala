@@ -2,21 +2,20 @@ package pl.warsawscala.rest.controller
 
 import javax.inject.Singleton
 
-import pl.warsawscala.rest.model.Login
-import play.api.libs.json.{JsError, JsSuccess}
-import play.api.mvc.{Action, BodyParsers, Controller, EssentialAction}
+import com.typesafe.scalalogging.StrictLogging
+import org.joda.time.DateTime
+import play.api.mvc.{Action, Controller, EssentialAction}
 
 @Singleton
-class GoogleCalendarController extends Controller {
+class GoogleCalendarController extends Controller with StrictLogging{
 
-  def login(): EssentialAction = Action(BodyParsers.parse.json) {
+  var map = Map[String, (DateTime,DateTime)]()
+
+
+  def holidays(startTime: DateTime, endTime: DateTime): EssentialAction = Action {
     r =>
-      r.body.validate[Login] match {
-        case JsSuccess(login, _) =>
-          Ok("")
-        case JsError(errors) =>
-          BadRequest(s"$errors")
-      }
+      logger.debug(s"$startTime $endTime")
+      Redirect(s"http://www.google.pl/$startTime/$endTime")
   }
 
 }
