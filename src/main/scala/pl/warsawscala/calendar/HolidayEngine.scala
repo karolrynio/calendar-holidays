@@ -7,8 +7,8 @@ import scala.concurrent.Future
 trait HolidayEngine {
   /**
     *
-    * @param from opcjonalna data od (jeżeli brak liczymy od początku roku)
-    * @param to opcjonalna data do (jęzeli brak liczymy do końca roku)
+    * @param from opcjonalna data od (jeżeli brak liczymy od początku bieżącego roku)
+    * @param to opcjonalna data do (jęzeli brak liczymy do końca bieżącego roku)
     * @return liczbę zaplanowanych dni urlopowych
     */
   def countHolidays(from: Option[LocalDate] = None, to: Option[LocalDate] = None): Future[Int]
